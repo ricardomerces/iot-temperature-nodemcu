@@ -62,7 +62,7 @@ void loop() {
 void conectarWifi() {
   delay(10);
   Serial.println();
-  Serial.print("Connecting to ");
+  Serial.print("Conectando ");
   Serial.println(wifiSSID);
 
   WiFi.mode(WIFI_STA);
