@@ -101,11 +101,11 @@ void measurementTempHumid() {
     lastSampleTime = currentMillis;
     float humidity = dht.readHumidity();
     float celsius = dht.readTemperature(false);
-    client.publish(temperatureTopic, String(celsius).c_str(), true);    // Keep the message on the Broker (true or false)
+    client.publish(temperatureTopic, String(celsius).c_str(), true);   // Keep the message on the Broker (true or false)
     Serial.print("Temperature: ");
     Serial.print(celsius);
     Serial.println(" *C");
-    client.publish(humidityTopic, String(humidity).c_str(), true);      // Keep the message on the Broker (true or false)
+    client.publish(humidityTopic, String(humidity).c_str(), true);     // Keep the message on the Broker (true or false)
     Serial.print("Humidity: ");
     Serial.println(humidity);
   }
