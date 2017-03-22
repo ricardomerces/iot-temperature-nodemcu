@@ -8,11 +8,11 @@
 // - Cliente MQTT: https://github.com/knolleary/pubsubclient
 
 
-// Configurações para WiFI, MQTT e DHT
+// Configurações dos parâmentros WiFI, MQTT e DHT
 // WiFi        = WIFI_SSID, WIFI_SENHA
 // MQTT        = MQTT_BROKER; MQTT_USUARIO; MQTT_SENHA; MQTT_ID_CLIENTE 
-// MQTT Topics = MQTT_TOPIC_TEMP; MQTT_TOPIC_HUMID
-// DHT         = DHT_PIN; DHT_SAMPLE_DELAY
+// MQTT Topics = MQTT_TOPICO_TEMPERATURA; MQTT_TOPICO_UMIDADE
+// DHT         = DHT_PINO; DHT_INTERVALO_MEDICAO
 
 // --- WiFi ---
 #include <ESP8266WiFi.h>
@@ -29,14 +29,14 @@ const char* mqttClienteId = "MQTT_ID_CLIENTE";       // Nome do cliente
 PubSubClient client(espClient);
 
 // --- MQTT Topics ---
-const char* topicoTemperatura = "MQTT_TOPIC_TEMP";   // TOPICO Temperatura - Ex: home/room/temperature
-const char* topicoUmidade = "MQTT_TOPIC_HUMID";      // TOPICO Umidade - Ex: home/room/humidity
+const char* topicoTemperatura = "MQTT_TOPICO_TEMPERATURA";   // TOPICO Temperatura - Ex: home/room/temperature
+const char* topicoUmidade = "MQTT_TOPICO_UMIDADE";           // TOPICO Umidade - Ex: home/room/humidity
 
 // --- DHT ---
 #include <DHT.h>
 #define DHTTYPE DHT22                                // Selecione o modelo do seu sensor (DHT11, DHT22, etc)
-const int pinDHT = 2;                                // Pino de dados do DHT (D2, ...)
-const long intervaloMedicao = 5000;                  // Intervalo das medições in Milliseconds
+const int pinDHT = DHT_PINO;                         // Pino de dados do DHT (D2, ...)
+const long intervaloMedicao = DHT_INTERVALO_MEDICAO; // Intervalo das medições in Milliseconds EX. 5000 (5 Segundos)
 DHT dht(pinDHT, DHTTYPE);
 unsigned long ultimaMedicao = 0;
 
