@@ -3,7 +3,8 @@
 # Iot with MQTT + DHT Temperature and Humidity Sensors Using ESP8266 Modules (NODEMCU)
 This project gives a simple way to deploy temperature and humidity sensors around your house using cheap components and the MQTT protocol.
 
-[![Screenshot](https://github.com/ricardomerces/iot-temperature-nodemcu/blob/master/images/modemcu-dht.png)
+[!modemcu-dht](images/modemcu-dht.png)
+
 
 
 The sensor publishes to 2 MQTT topics:
