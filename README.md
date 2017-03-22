@@ -11,4 +11,4 @@ The sensor publishes to 2 MQTT topics:
 - DHT Sensor Library https://github.com/adafruit/DHT-sensor-library
 - MQTT Client Library https://github.com/knolleary/pubsubclient
 
-![nodemcu + dht]https://github.com/ricardomerces/iot-temperature-nodemcu/blob/master/nodemcu-dht.png
+[![Screenshot](images/modemcu-dht.png)
