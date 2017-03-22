@@ -11,4 +11,7 @@ The sensor publishes to 2 MQTT topics:
 - DHT Sensor Library https://github.com/adafruit/DHT-sensor-library
 - MQTT Client Library https://github.com/knolleary/pubsubclient
 
+### Android MQTT Client
+- IoT MQTT Dashboard https://play.google.com/store/apps/details?id=com.thn.iotmqttdashboard
+
 ![alt tag](images/nodemcu-dht.png)
