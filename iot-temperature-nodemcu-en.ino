@@ -35,8 +35,8 @@ const char* humidityTopic = "MQTT_TOPIC_HUMID";      // TOPIC HUMIDITY - Ex: hom
 // --- DHT ---
 #include <DHT.h>
 #define DHTTYPE DHT22                                // Update this to match your DHT type
-const int dhtPin = DHT_SAMPLE_DELAY;                 // DHT Pin DATA (D2, ...)
-const long sampleDelay = 5000;                       // DELAY in Milliseconds
+const int dhtPin = DHT_PIN;                          // DHT Pin DATA (D2, ...)
+const long sampleDelay = DHT_SAMPLE_DELAY;           // DELAY in Milliseconds - 5000
 DHT dht(dhtPin, DHTTYPE);
 unsigned long lastSampleTime = 0;
 
