@@ -83,7 +83,7 @@ void setupWifi() {
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    if (client.connect(mqttClientId)) {
+    if (client.connect(mqttClientId, mqttUsername, mqttPassword)) {
       Serial.println("connected");
     } else {
       Serial.print("failed, rc=");
