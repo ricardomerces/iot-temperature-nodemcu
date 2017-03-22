@@ -16,8 +16,8 @@
 
 // --- WiFi ---
 #include <ESP8266WiFi.h>
-const char* wifiSSID = "WIFI_SSID";                   // Your SSID       
-const char* wifiPassword = "WIFI_PASS";               // Your Password
+const char* wifiSSID = "WIFI_SSID";                  // Your SSID       
+const char* wifiPassword = "WIFI_PASS";              // Your Password
 WiFiClient espClient;
 
 // --- MQTT ---
@@ -25,7 +25,7 @@ WiFiClient espClient;
 const char* mqttServer = "MQTT_HOST";                // iot.eclipse.org
 const char* mqttUsername = "MQTT_USER";              // MQTT User
 const char* mqttPassword = "MQTT_PASS";              // MQTT Password
-const char* mqttClientId = "MQTT_RMO_TEMP01";        // Must be unique on the MQTT network
+const char* mqttClientId = "MQTT_CLIENT_ID";         // Must be unique on the MQTT network
 PubSubClient client(espClient);
 
 // --- MQTT Topics ---
@@ -35,7 +35,7 @@ const char* humidityTopic = "MQTT_TOPIC_HUMID";      // TOPIC HUMIDITY - Ex: hom
 // --- DHT ---
 #include <DHT.h>
 #define DHTTYPE DHT22                                // Update this to match your DHT type
-const int dhtPin = 2;                                // DHT Pin DATA (D2, ...)
+const int dhtPin = DHT_SAMPLE_DELAY;                 // DHT Pin DATA (D2, ...)
 const long sampleDelay = 5000;                       // DELAY in Milliseconds
 DHT dht(dhtPin, DHTTYPE);
 unsigned long lastSampleTime = 0;
