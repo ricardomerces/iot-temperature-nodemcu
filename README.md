@@ -7,6 +7,9 @@ The sensor publishes to 2 MQTT topics:
 - Temperature topic (example: `home/room/temperature`): The sensor publishes the temperature in Celsius (example: `25.10`).
 - Humidity topic (example: `home/room/humidity`): The sensor publishes the relative humidity in percent (example: `37.40`).
 
+### ESP8266 Install (Arduino IDE)
+ - Installing the ESP8266 Arduino Addon https://learn.sparkfun.com/tutorials/esp8266-thing-hookup-guide/installing-the-esp8266-arduino-addon
+
 ### Additional Libraries
 - DHT Sensor Library https://github.com/adafruit/DHT-sensor-library
 - MQTT Client Library https://github.com/knolleary/pubsubclient
